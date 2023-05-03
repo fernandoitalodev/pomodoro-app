@@ -1,6 +1,6 @@
 
-import Pomodoro from './pomodoro/Pomodoro'
-import './styles.scss'
+import Pomodoro from './src/pomodoro/Pomodoro'
+import './src/styles.scss'
 
 function App() {
   

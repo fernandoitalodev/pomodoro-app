@@ -18,7 +18,8 @@ const Pomodoro = () => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(standardMinutes);
   const [message, setMessage] = useState(false);
-  const [breaks, setBreak] = useState(5 - 1);
+  const [breaks, setBreak] = useState(standardBreak);
+  const [standardBreak,setStandardBreak]=useState(5)
   // const [isBreak,setIsBreak]=useState(false)
   const [reload, setReload] = useState(false);
   const showMinutes = minutes >= 10 ? minutes : `0${minutes}`;
@@ -52,8 +53,6 @@ const Pomodoro = () => {
         }
       }, 1000);
       return () => clearInterval(interval);
-    } else {
-      setSeconds(0);
     }
   }, [seconds, iniciarTimer]);
 
