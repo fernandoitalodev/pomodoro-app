@@ -18,8 +18,9 @@ const Pomodoro = () => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(standardMinutes);
   const [message, setMessage] = useState(false);
-  const [breaks, setBreak] = useState(standardBreak);
   const [standardBreak,setStandardBreak]=useState(5)
+
+  const [breaks, setBreak] = useState(standardBreak);
   // const [isBreak,setIsBreak]=useState(false)
   const [reload, setReload] = useState(false);
   const showMinutes = minutes >= 10 ? minutes : `0${minutes}`;
@@ -58,19 +59,24 @@ const Pomodoro = () => {
 
   useEffect(() => {
     if (reload) {
-      setMinutes(standardMinutes);
+      if(message){
+        setMinutes(standardBreak)
+      }else{
+        setMinutes(standardMinutes);
 
       setIniciar(false);
 
       setReload(false);
       setSeconds(0);
+      }
+      
     }
   }, [reload]);
 
   useEffect(()=>{
     setBreak(breaks)
     setMinutes(standardMinutes)
-  },[standardMinutes,breaks])
+  },[standardMinutes,breaks,standardBreak])
 
   return (
     <div className="pomodoroContainer">
