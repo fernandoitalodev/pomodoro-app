@@ -1,0 +1,84 @@
+@import '../variables.scss';
+.pomodoroContainer{
+    border: 1px solid white;
+    border-radius: 10px;
+    width:600px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    font-family: 'Roboto Flex', sans-serif;
+   
+}
+
+.clock{
+    
+    height:200px;
+    width:200px;
+    border: none;
+    display:flex;
+    font-size:70px;
+    align-items: center;
+    justify-content: center;
+
+   
+        font-weight: 400;
+    
+}
+.clock-break{
+  
+   color: #4DDA6E;
+}.clock-start{
+   
+     color: #4CACFF;
+}
+
+.control-Pomodoro{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+
+.pomodoroSettings{
+    
+    width: 300px;
+    height: 300px;
+    box-shadow: 1px 1px 3px rgb(110, 110, 110);
+    position:absolute;
+    background-color: $background-principal;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding:0em 1em;
+    margin:0;
+    border-radius: 10px;
+
+    .item{
+        display:flex;
+       justify-content: space-between;
+       align-items:center;
+       width:100%;
+       label{
+        font-weight:300;
+        
+       }
+       
+       input{
+        width:50px;
+       }
+
+      
+       
+        
+    }
+   div:first-child{
+  order:0;
+}
+
+}
+.none{
+    display: none;
+}

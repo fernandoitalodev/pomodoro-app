@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.btn-red{
+   background-color: #FF4C4C;
+}
+.button-pomodoro{
+    border-radius: 32px;
+    width:70px;
+    height:40px;
+    font-size:20px;
+    color:white;
+    border:none;
+    box-shadow: none;
+}
+.controlPomodoro-timer{
+   display:flex;
+   align-items: center;
+}
+
+
+ .break-style{
+    .btn-normal{
+      background-color: #4DDA6E;
+    }.btn-weak{
+      background-color: $green-btn-weak;
+    }
+ }
+ .focus-style{
+   .btn-normal{
+      background-color: #4CACFF;
+   }.btn-weak{
+     background-color: $blue-btn-weak;
+   }
+}
+
+
